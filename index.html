@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora Binaria de Operaciones L&oacute;gicas</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<img src="img/logocolor.png" width="10%" alt="">
+				<br>Calculadora Binaria de Operaciones L&oacute;gicas
+			</div>
+ 			<div class="panel-body">
+				<form>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="clear">&nbsp;</div>
+							<div class="form-group binario" id="prueba">
+							    <div class="input-group">
+							      <span class="input-group-addon">
+							        <input type="checkbox" aria-label="..." name="chk" id="chkUno">
+							      </span>
+							      <input type="text" class="form-control input" aria-label="..." id="primero" name="inputNum" placeholder="Ingrese Primer Valor"  onkeypress="return permite(event, 'bin',this)">
+							    </div>
+							</div>
+							<div class="form-group binario" id="prueba">
+						       <div class="input-group">
+							      <span class="input-group-addon">
+							        <input type="checkbox" aria-label="..." name="chk" id="chkDos">
+							      </span>
+							      <input type="text" class="form-control input" aria-label="..." id="segundo" name="inputNum" placeholder="Ingrese Segundo Valor"  onkeypress="return permite(event, 'bin',this)">
+							    </div>
+							</div>
+							<div class="form-group binario">
+						       <input type="text" class="form-control" id="resultado" tabindex="3" placeholder="Resultado" onkeypress="return permite(event, 'bin',this)" maxlength="12" disabled="disabled">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="well">
+								<div class="form-group">
+									 <button type="button" id="uno" class="btn btn-default numero" tabindex="12" value="1">1</button>
+									 <button type="button" id="cero" class="btn btn-default numero" tabindex="12" value="0">0</button>
+								</div>
+								<div class="form-group">
+									 <button type="button" id="and" class="btn btn-default operacion" tabindex="12">AND</button>
+									 <button type="button" id="xor" class="btn btn-default operacion" tabindex="12">XOR</button>
+								</div>
+								<div class="form-group">
+									 <button type="button" id="or" class="btn btn-default operacion" tabindex="12">OR</button>
+									 <button type="button" id="not" class="btn btn-default" tabindex="12" disabled>NOT</button>
+								</div>
+								<div class="form-group">
+									 <button type="button" id="limpiar" class="btn btn-default" tabindex="12">
+									 	<span class="glyphicon glyphicon-refresh"></span>
+									 </button>
+									 <button type="button" id="igual"class="btn btn-primary" tabindex="12" disabled> = </button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="panel-footer">	
+				<br>
+				 © Selkis.com.ve - Yessica Garcia
+			</div>
+		</div>
+		</div>
+	</div>
+	<input type="hidden" id="bandera">
+	<input type="hidden" id="banderaNegada">
+</body>
+</html>
